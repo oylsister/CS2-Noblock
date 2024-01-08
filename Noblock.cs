@@ -42,8 +42,8 @@ namespace Noblock
             {
                 if (!undo)
                 {
-                    clientPawn.Collision.CollisionAttribute.CollisionGroup = (byte)CollisionGroup.COLLISION_GROUP_DEBRIS;
-                    clientPawn.Collision.CollisionGroup = (byte)CollisionGroup.COLLISION_GROUP_DEBRIS;
+                    clientPawn.Collision!.CollisionAttribute.CollisionGroup = (byte)CollisionGroup.COLLISION_GROUP_DISSOLVING;
+                    clientPawn.Collision.CollisionGroup = (byte)CollisionGroup.COLLISION_GROUP_DISSOLVING;
                     CollisionRulesChanged(clientPawn);
 
                     client.PrintToChat($" {ChatColors.Green}[NoBlock]{ChatColors.Default} You have been applied no block. You will now can walk through other player!");
