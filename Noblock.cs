@@ -27,6 +27,12 @@ namespace Noblock
 
         private void ApplyNoBlock(CCSPlayerController client, bool undo = false)
         {
+            if (client == null)
+                return;
+
+            if (client.TeamNum <= 1)
+                return;
+
             var clientPawn = client.PlayerPawn.Value;
 
             if (clientPawn == null)
